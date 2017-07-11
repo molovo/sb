@@ -1,0 +1,14 @@
+.project-list
+  padding: $baseline
+
+  @media (min-width: 42em)
+    padding: between($baseline, $baseline * 2, 42em, 80em) between($baseline, $baseline * 4, 42em, 80em)
+
+  @media (min-width: 80em)
+    padding: #{$baseline * 2} #{$baseline * 4}
+
+  &__item
+    margin: 0 0 #{$baseline * 2}
+
+  &__info
+    display: flex

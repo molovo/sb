@@ -1,0 +1,86 @@
+---
+layout: page
+pagination:
+  enabled: true
+---
+
+<article class="post"
+         aria-labelledby="{{ page.title | slugify }}-title"
+         {% if include.listing == 'true' %}itemprop="blogPost"{% endif %}
+         itemscope
+         itemtype="http://schema.org/BlogPosting"
+         {% if include.listing == 'false' %}id="article"{% endif %}
+         {% if include.listing == 'true' %}id="{{ page.title | slugify }}"{% endif %}>
+    <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}" />
+    {% if page.image %}
+      <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+        <link itemprop="url" href="{{ site.url }}{{ page.image.url }}" />
+        <meta itemprop="representativeOfPage" content="true" />
+        <meta itemprop="height" content="{{ page.image.height }}" />
+        <meta itemprop="width" content="{{ page.image.width }}" />
+      </div>
+    {% else %}
+      <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+        <link itemprop="url" href="{{ site.url }}{{ site.logo }}" />
+        <meta itemprop="representativeOfPage" content="false" />
+        <meta itemprop="height" content="60" />
+        <meta itemprop="width" content="323" />
+      </div>
+    {% endif %}
+  <header class="post__header">
+    {% if include.listing == 'true' %}
+      <a href="{{ page.url }}"
+         title="{{ page.title }}">
+        <h1 itemprop="headline" id="{{ page.title | slugify }}-title">
+          {{ page.title }}
+        </h1>
+      </a>
+    {% else %}
+      <h1 itemprop="headline" id="{{ page.title | slugify }}-title">
+        {{ page.title }}
+      </h1>
+    {% endif %}
+    <date itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date: '%A %d %B %Y' }}
+    </date>
+    <meta itemprop="dateModified" content="{{ page.date | date_to_xmlschema }}">
+    <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="{{ site.author }}" />
+      <link itemprop="url" href="{{ site.url }}" />
+    </div>
+    <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="{{ site.name }}" />
+      <link itemprop="url" href="{{ site.url }}" />
+      <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+        <link itemprop="url" href="{{ site.url }}{{ site.logo }}" />
+        <meta itemprop="representativeOfPage" content="false" />
+        <meta itemprop="height" content="60" />
+        <meta itemprop="width" content="323" />
+      </div>
+    </div>
+  </header>
+
+  <section itemprop="articleBody" class="post__content">
+    {{ body }}
+  </section>
+</article>
+
+<!-- Pagination links -->
+<nav class="posts__pagination">
+  <ul>
+    <li>
+      {% if page.previous.url %}
+        <a href="{{ page.previous.url }}" class="posts__pagination__previous"><span class="screenreader-text">Previous Article: </span>{{ page.previous.title }}</a>
+      {% endif %}
+    </li>
+
+    <li>
+    </li>
+
+    <li>
+      {% if page.next.url %}
+        <a href="{{ page.next.url }}" class="posts__pagination__next"><span class="screenreader-text">Next Article: </span>{{ page.next.title }}</a>
+      {% endif %}
+    </li>
+  </ul>
+</div>

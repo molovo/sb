@@ -1,0 +1,27 @@
+.header
+  display: flex
+  flex-wrap: wrap
+  padding: #{$baseline * 4} $baseline
+
+  @media (min-width: 42em)
+    padding: #{$baseline * 4} between($baseline, $baseline * 4, 42em, 80em)
+
+  @media (min-width: 80em)
+    padding: #{$baseline * 4}
+
+  &__logo
+    flex: 0 0 100%
+    margin: 0 0 #{2 * $baseline}
+
+    @media (min-width: 42em)
+      flex: 0 0 33.33333%
+      margin: 0
+
+  &__intro
+    flex: 0 0 100%
+
+    @media (min-width: 42em)
+      flex: 0 0 66.66667%
+
+    p
+      margin: 0

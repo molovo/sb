@@ -1,0 +1,88 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: S.B. Decking and Planters
+name: S.B. Decking and Planters
+email: email@example.com
+description: Steve Bealing is an independent contractor, designing and building bespoke decking and garden fixtures across the South West.
+headline: Steve Bealing is an independent contractor, designing and building bespoke decking and garden fixtures across the South West.
+baseurl: '/'
+url: 'https://bass.molovo.co'
+facebook_username: SBdeckingandplanters
+author: James Dinsdale
+
+collections:
+  projects:
+    title: Projects
+    permalink: "/projects/:title/"
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      hide_intro: true
+
+# Build settings
+permalink: /writing/:title/
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: /:num/
+  sort_reverse: true
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - no_intra_emphasis
+    - tables
+    - autolink
+    - strikethrough
+    - with_toc_data
+    - smart
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+keep_files:
+  - css
+  - js
+  - img
+exclude:
+  - _assets
+  - coffeelint.json
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.coffee
+  - netlify.toml
+  - node_modules
+  - package.json
+  - yarn.lock
+
+# Jekyll Picture Tag settings
+picture:
+  source: "_assets/img"
+  output: "img"
+  markup: "picture"
+  presets:
+    default:
+      ppi: [1, 2]
+      source_large:
+        media: "(min-width: 64em)"
+        width: "1280"
+      source_medium:
+        media: "(min-width: 40em)"
+        width: "960"
+      source_default:
+        width: "600"

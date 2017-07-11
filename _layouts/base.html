@@ -1,0 +1,138 @@
+{% if page.title %}
+  {% capture title %}{{ page.title}} | {{ site.title}}{% endcapture %}
+{% else %}
+  {% assign title = site.title %}
+{% endif %}
+
+{% if page.description %}
+  {% assign description = page.description %}
+{% elsif page.excerpt %}
+  {% capture description %}{{ page.excerpt | strip_html }}{% endcapture %}
+{% else %}
+  {% assign description = site.description %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="{{ description }}" />
+  <meta name="author" content="{{ site.author }}" />
+  <meta name="robots" content="noodp" />
+
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:image" content="{{ site.url }}/img/me.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:image" content="{{ site.url }}/img/me.jpg">
+
+  <script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description }}"
+  }</script>
+  <script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "{{ title }}",
+    "url": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
+    "description": "{{ description }}"{% if page.layout == 'post' %},
+      "mainEntity": {
+        "@type": "BlogPosting",
+        "@id": "{{ site.url }}{{ page.url | replace: 'index.html' }}#article",
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{{ page.date | date_to_xmlschema }}",
+        "mainEntityOfPage": "{{ site.url }}{{ page.url | replace: 'index.html' }}",
+        "headline": "{{ page.title | slugify }}",
+        "image": {
+          "@type": "ImageObject",
+          {% if page.image %}
+            "url": "{{ site.url }}{{ page.image.url }}",
+            "height": {{ page.image.height }},
+            "width": {{ page.image.width }},
+            "representativeOfPage": true
+          {% else %}
+            "url": "{{ site.url }}{{ site.logo }}",
+            "height": 60,
+            "width": 323,
+            "representativeOfPage": false
+          {% endif %}
+        },
+        "author": {
+          "@type": "Person",
+          "name": "{{ site.author }}",
+          "sameAs": "{{ site.url }}"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ site.name }}",
+          "sameAs": "{{ site.url }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}{{ site.logo }}",
+            "height": 60,
+            "width": 323,
+            "representativeOfPage": false
+          }
+        }
+      }
+    {% endif %}
+  }</script>
+  <script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "url": "{{ site.url }}",
+    "sameAs": [
+      "https://twitter.com/{{ site.twitter_username }}",
+      "https://github.com/{{ site.github_username }}",
+      "https://medium.com/@{{ site.medium_username }}",
+      "https://dribbble.com/{{ site.dribbble_username }}"
+    ],
+    "name":"{{ site.author }}"
+  }</script>
+
+  <link href="https://fonts.googleapis.com/css?family=Qwigley" rel="stylesheet">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Karla:400,700,400i" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}" />
+  {% if paginator.previous_page %}
+    <link rel="prev" href="{{ site.url }}{{ paginator.previous_page_path }}" />
+  {% elsif page.previous.url %}
+    <link rel="prev" href="{{ site.url }}{{ page.previous.url }}" />
+  {% endif %}
+  {% if paginator.next_page %}
+    <link rel="next" href="{{ site.url }}{{ paginator.next_page_path }}" />
+  {% elsif page.next.url %}
+    <link rel="next" href="{{ site.url }}{{ page.next.url }}" />
+  {% endif %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} » Feed" href="{{ site.url }}/feed.xml">
+
+  <title>{{ title }}</title>
+</head>
+<body class="page--{{ page.layout }}">
+  {% include nav.html %}
+  {% include header.html %}
+
+  <main id="content" class="content" role="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="/js/main.min.js"></script>
+</body>
+</html>

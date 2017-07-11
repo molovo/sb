@@ -1,0 +1,15 @@
+---
+layout: base
+---
+
+{% if page.images %}
+  <section class="gallery">
+      {% for image in page.images %}
+          <div class="gallery__image">
+              {% picture {{ image }} %}
+          </div>
+      {% endfor %}
+  </section>
+{% endif %}
+
+{{ content }}

@@ -1,0 +1,38 @@
+.gallery
+  align-items: flex-start
+  display: flex
+  flex-wrap: wrap
+
+  &__image
+    flex: 0 0 100%
+    height: 18em
+    width: 100%
+
+    img
+      object-fit: cover
+      object-position: center
+      height: 100%
+      width: 100%
+
+    @media (min-width: 36em)
+      flex: 0 0 50%
+      width: 50%
+
+    @media (min-width: 48em)
+      flex: 0 0 25%
+      width: 25%
+
+    &:first-child:nth-last-child(2),
+    &:first-child:nth-last-child(2) ~ .gallery__image
+      @media (min-width: 48em)
+        flex: 0 0 50%
+        width: 50%
+
+    &:first-child:nth-last-child(3)
+      @media (min-width: 36em)
+        flex: 0 0 100%
+        width: 100%
+
+      @media (min-width: 48em)
+        flex: 0 0 50%
+        width: 50%

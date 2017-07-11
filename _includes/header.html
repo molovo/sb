@@ -1,0 +1,25 @@
+{% if page.image %}
+  {% assign image = page.image %}
+{% elsif page.images %}
+  {% capture image %}{{ page.images | first }}{% endcapture %}
+{% endif %}
+
+{% if image %}
+  <style type="text/css">
+    .page--project .header::before {
+      background-image: url('/img/{{ image }}');
+    }
+  </style>
+{% endif %}
+
+<header class="header">
+  <div class="header__logo">
+    {% include logo.html %}
+  </div>
+
+  <div class="header__intro">
+    {% unless page.hide_intro %}
+      <p class="lead">{{ site.headline }}</p>
+    {% endunless %}
+  </div>
+</header>

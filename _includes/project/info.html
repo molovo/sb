@@ -1,0 +1,15 @@
+<section class="project__info">
+  <ul>
+    {% if include.project.client %}
+      <li><strong>Client:</strong> {{ include.project.client }}</li>
+    {% endif %}
+
+    {% if include.project.location %}
+      <li><strong>Location:</strong> {{ include.project.location }}</li>
+    {% endif %}
+
+    {% if include.project.size %}
+      <li><strong>Size:</strong> {{ include.project.size }}</li>
+    {% endif %}
+  </ul>
+</section>

@@ -1,0 +1,45 @@
+.menu
+  align-items: center
+  display: flex
+  justify-content: flex-end
+  left: 0
+  padding: #{$baseline * 2}
+  position: fixed
+  top: 0
+  transition: transform .25s
+  width: 100%
+  z-index: 999
+
+  .menu-open &
+    transform: translateX(#{$sidebar_width * -1})
+
+  &__toggle
+    .page--project &
+      path
+        fill: $color-white
+
+  .icon
+    height: auto
+    width: $baseline
+
+    path
+      transition: opacity .25s, transform .5s
+
+      &:first-child
+        opacity: 1
+
+        .menu-open &
+          opacity: 0
+
+      &:nth-child(2)
+        transform-origin: top right
+
+        .menu-open &
+          transform: translateY(0) rotate(-45deg)
+
+      &:last-child
+        transform-origin: bottom right
+
+        .menu-open &
+          transform: translateY(0) rotate(45deg)
+

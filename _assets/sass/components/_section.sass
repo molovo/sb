@@ -1,0 +1,15 @@
+.section
+  display: flex
+  padding: $baseline
+
+  @media (min-width: 42em)
+    padding: between($baseline, $baseline * 4, 42em, 80em)
+
+  @media (min-width: 80em)
+    padding: #{$baseline * 4}
+
+  &__left
+    flex: 0 0 66.66667%
+
+  &__right
+    flex: 0 0 33.33333%

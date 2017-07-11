@@ -1,0 +1,54 @@
+@keyframes scaleImage
+  0%
+    transform: translateZ(0) scale(1.25)
+  100%
+    transform: translateZ(0) scale(1)
+
+.page--project
+  .header
+    color: $color-white
+    height: 100vh
+    overflow: hidden
+    position: relative
+    text-shadow: 0px 1px 3px rgba($color-black, .3)
+
+    &::before
+      animation: scaleImage 60s ease-out forwards
+      background: url('') center / cover no-repeat
+      bottom: 0
+      content: ''
+      left: 0
+      position: absolute
+      right: 0
+      top: 0
+      transform-origin: 50% 50%
+      z-index: -1
+
+.project
+  display: flex
+  max-width: 100%
+  padding: #{$baseline * 4} $baseline
+
+  @media (min-width: 42em)
+    padding: #{$baseline * 4} between($baseline, $baseline * 4, 42em, 80em)
+
+  @media (min-width: 80em)
+    padding: #{$baseline * 4}
+
+  &__content
+    flex: 0 1 100%
+
+  &__sidebar
+    flex: 0 0 15em
+    margin-left: #{$baseline * 2}
+
+  &__info
+    border-left: .25em solid $color-blue
+    padding-left: 1.25em
+
+    ul
+      list-style: none
+
+  &__image
+    margin: 0 0 $baseline
+    width: 100%

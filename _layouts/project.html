@@ -1,0 +1,21 @@
+---
+layout: base
+---
+
+<section class="project">
+  <main class="project__content">
+    {{ content }}
+
+    <figure class="project-gallery">
+      {% for image in page.images %}
+        <div class="project-gallery__image">
+          {% picture {{ image }} %}
+        </div>
+      {% endfor %}
+    </figure>
+  </main>
+
+  <aside class="project__sidebar">
+    {% include project/info.html project=page %}
+  </aside>
+</section>

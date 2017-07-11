@@ -1,0 +1,31 @@
+$sidebar_width: 24em
+
+@function between($to, $from, $toWidth, $fromWidth)
+  $slope: ($to - $from) / ($toWidth - $fromWidth)
+  $base: $from - $slope * $fromWidth
+
+  @return calc(#{$base} + #{100vw * $slope})
+
+@import reset
+@import colors
+@import type
+@import branding
+
+@import components/section
+@import components/header
+@import components/nav
+@import components/footer
+@import components/form
+@import components/button
+@import components/contact
+@import components/sidebar
+@import components/gallery
+@import components/project-list
+@import components/project-gallery
+@import components/services
+
+@import pages/project
+
+body
+  &.menu-open
+    overflow: hidden

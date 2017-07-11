@@ -1,0 +1,23 @@
+.footer
+  background: $color-almost-black
+  color: $color-white
+  display: flex
+  justify-content: space-between
+  padding: $baseline
+
+  @media (min-width: 42em)
+    padding: between($baseline, $baseline * 2, 42em, 80em) between($baseline, $baseline * 4, 42em, 80em)
+
+  @media (min-width: 80em)
+    padding: #{$baseline * 2} #{$baseline * 4}
+
+  &__social
+    svg
+      display: inline
+      margin-right: .25em
+      margin-top: .25em
+      vertical-align: baseline
+      width: 1em
+
+      path
+        fill: $color-blue
