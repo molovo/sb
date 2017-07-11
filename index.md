@@ -1,9 +1,9 @@
 ---
 layout: page
 images:
-  - 20170518_154014.jpg
-  - IMG_20160725_192443.jpg
-  - IMG_20160731_144321.jpg
+- 20170518_154014.jpg
+- IMG_20160725_192443.jpg
+- IMG_20160731_144321.jpg
 ---
 
 <div class="services">

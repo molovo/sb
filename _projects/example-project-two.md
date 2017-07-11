@@ -1,12 +1,11 @@
 ---
 title: Example Project Two
-slug: example-project-two
 images:
-  - IMG_20160725_192443.jpg
-  - IMG_20160725_192453.jpg
-  - IMG_20160724_090534.jpg
-  - IMG_20160724_090552.jpg
-  - IMG_20160724_181018.jpg
+- IMG_20160725_192443.jpg
+- IMG_20160725_192453.jpg
+- IMG_20160724_090534.jpg
+- IMG_20160724_090552.jpg
+- IMG_20160724_181018.jpg
 client: Miss Scarlet
 location: Bournemouth, UK
 size: 45m²

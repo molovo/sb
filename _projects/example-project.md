@@ -1,9 +1,8 @@
 ---
 title: Example Project
-slug: example-project
 images:
-  - 20170518_154022.jpg
-  - 20170518_154014.jpg
+- 20170518_154022.jpg
+- 20170518_154014.jpg
 client: Miss Scarlet
 location: Bournemouth, UK
 size: 45m²

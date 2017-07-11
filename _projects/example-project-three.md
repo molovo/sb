@@ -1,9 +1,8 @@
 ---
 title: Example Project Three
-slug: example-project-three
 images:
-  - IMG_20160731_144321.jpg
-  - IMG_20160731_142306.jpg
+- IMG_20160731_144321.jpg
+- IMG_20160731_142306.jpg
 client: Miss Scarlet
 location: Bournemouth, UK
 size: 45m²
