@@ -77,9 +77,9 @@ picture:
       - 2
       source_large:
         media: "(min-width: 64em)"
-        width: '1280'
+        width: 1280
       source_medium:
         media: "(min-width: 40em)"
-        width: '960'
+        width: 960
       source_default:
-        width: '600'
+        width: 600
