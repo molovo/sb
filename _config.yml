@@ -20,10 +20,10 @@ defaults:
     layout: project
     hide_intro: true
     images:
-      -
-    client:
-    location:
-    size:
+    - 
+    client: 
+    location: 
+    size: 
 name: S.B. Decking and Planters
 email: email@example.com
 description: Steve Bealing is an independent contractor, designing and building bespoke
