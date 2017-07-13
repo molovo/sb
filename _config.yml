@@ -2,9 +2,6 @@
 title: S.B. Decking and Planters
 timezone: UTC
 collections:
-  posts:
-    title: Posts
-    output: true
   projects:
     title: Projects
     output: true
