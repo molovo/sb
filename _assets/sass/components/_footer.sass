@@ -2,10 +2,12 @@
   background: $color-almost-black
   color: $color-white
   display: flex
+  flex-direction: column-reverse
   justify-content: space-between
   padding: $baseline
 
   @media (min-width: 42em)
+    flex-direction: row
     padding: between($baseline, $baseline * 2, 42em, 80em) between($baseline, $baseline * 4, 42em, 80em)
 
   @media (min-width: 80em)

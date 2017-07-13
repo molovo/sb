@@ -1,16 +1,27 @@
 .contact
   background: $color-almost-white
   display: flex
-  padding: $baseline
+  flex-wrap: wrap
+  padding: #{$baseline * 2} $baseline
 
   @media (min-width: 42em)
-    padding: between($baseline, $baseline * 4, 42em, 80em)
+    padding: between($baseline * 2, $baseline * 4, 42em, 80em) between($baseline, $baseline * 4, 42em, 80em)
+
+  @media (min-width: 60em)
+    flex-wrap: nowrap
 
   @media (min-width: 80em)
     padding: #{$baseline * 4}
 
   &__intro, &__form
-    flex: 0 0 calc(50% - #{$baseline / 2})
+    flex: 0 0 100%
+
+    @media (min-width: 60em)
+      flex: 0 0 calc(50% - #{$baseline / 2})
 
   &__intro
     margin-right: $baseline
+
+  &__form
+    @media (min-width: 60em)
+      padding-top: #{$baseline * 2}

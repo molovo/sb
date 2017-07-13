@@ -4,11 +4,19 @@ layout: base
 
 {% if page.images %}
   <section class="gallery">
-      {% for image in page.images %}
-          <div class="gallery__image">
-              {% picture {{ image }} %}
-          </div>
-      {% endfor %}
+    {% for image in page.images limit: 3 %}
+      <div class="gallery__image">
+        {% picture {{ image }} %}
+      </div>
+    {% endfor %}
+  </section>
+{% else  %}
+  <section class="gallery">
+    {% for project in site.projects limit: 3 %}
+      <div class="gallery__image">
+        {% picture {{ project.images | first }} %}
+      </div>
+    {% endfor %}
   </section>
 {% endif %}
 

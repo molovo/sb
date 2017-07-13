@@ -3,27 +3,21 @@ layout: base
 ---
 
 <section class="project-list">
-    {% for project in site.projects %}
-        <article class="project-list__item">
-            <a href="{{ project.url }}" class="project-list__title">
-                <h2>{{ project.title }}</h2>
-            </a>
+  {% for project in site.projects %}
+    <article class="project-list__item">
+      <figure class="project-gallery">
+        {% for image in project.images limit: 2 %}
+          <div class="project-gallery__image">
+            {% picture {{ image }} %}
+          </div>
+        {% endfor %}
+      </figure>
 
-            <div class="project-list__info">
-              <figure class="project-gallery">
-                {% for image in project.images limit: 2 %}
-                  <div class="project-gallery__image">
-                    {% picture {{ image }} %}
-                  </div>
-                {% endfor %}
-              </figure>
+      <aside class="project__sidebar">
+        {% include project/info.html project=project %}
 
-              <aside class="project__sidebar">
-                {% include project/info.html project=project %}
-
-                <a class="button" href="{{ project.url }}">View Project</a>
-              </aside>
-            </div>
-        </article>
-    {% endfor %}
+        <a class="button" href="{{ project.url }}">View Project</a>
+      </aside>
+    </article>
+  {% endfor %}
 </section>

@@ -1,7 +1,11 @@
 .gallery
   align-items: flex-start
   display: flex
-  flex-wrap: wrap
+  overflow-x: auto
+
+  @media (min-width: 36em)
+    flex-wrap: wrap
+    overflow-x: hidden
 
   &__image
     flex: 0 0 100%
@@ -21,6 +25,10 @@
     @media (min-width: 48em)
       flex: 0 0 25%
       width: 25%
+
+    &:first-child:last-child
+      flex: 0 0 100%
+      width: 100%
 
     &:first-child:nth-last-child(2),
     &:first-child:nth-last-child(2) ~ .gallery__image

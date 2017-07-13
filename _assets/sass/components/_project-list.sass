@@ -8,7 +8,15 @@
     padding: #{$baseline * 2} #{$baseline * 4}
 
   &__item
+    display: flex
+    flex-wrap: wrap
     margin: 0 0 #{$baseline * 2}
 
-  &__info
-    display: flex
+    @media (min-width: 60em)
+      flex-wrap: nowrap
+
+    .project__sidebar
+      order: 1
+
+      @media (min-width: 60em)
+        margin-left: $baseline

@@ -3,11 +3,14 @@
   flex-wrap: wrap
 
   &__field
-    flex: 0 0 calc(50% - #{$baseline / 2})
+    flex: 0 0 100%
     margin: 0 0 $baseline
 
-    &:nth-child(2n + 1)
-      margin-right: $baseline
+    @media (min-width: 24em)
+      flex: 0 0 calc(50% - #{$baseline / 2})
+
+      &:nth-child(2n + 1)
+        margin-right: $baseline
 
     &--full-width
       flex: 0 0 100%
@@ -22,7 +25,7 @@
 
   &__label
     font-size: .75em
-    text-transform: uppercase
+    font-weight: 700
 
   &__input,
   &__select,

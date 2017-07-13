@@ -3,6 +3,7 @@
   color: $color-white
   height: 100vh
   left: 100%
+  max-width: calc(100vw - #{$baseline * 2})
   overflow-y: auto
   padding: $baseline
   position: fixed
@@ -13,9 +14,11 @@
   z-index: 999
 
   .menu-open &
-    box-shadow: -5px 0px 15px rgba($color-black, .3)
-    transform: translateX(#{$sidebar_width * -1})
+    box-shadow: -5px 0px 15px rgba($color-almost-black, .3)
+    transform: translateX(-100%)
 
+    @media (min-width: $sidebar-width)
+      transform: translateX(#{$sidebar_width * -1})
 
   &__header
     display: flex
