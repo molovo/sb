@@ -20,10 +20,10 @@ defaults:
     layout: project
     hide_intro: true
     images:
-    - 
-    client: 
-    location: 
-    size: 
+    -
+    client:
+    location:
+    size:
 name: S.B. Decking and Planters
 email: email@example.com
 description: Steve Bealing is an independent contractor, designing and building bespoke
@@ -31,7 +31,7 @@ description: Steve Bealing is an independent contractor, designing and building 
 headline: Steve Bealing is an independent contractor, designing and building bespoke
   decking and garden fixtures across the South West.
 baseurl: "/"
-url: https://bass.molovo.co
+url: https://sbdecking.netlify.com
 facebook_username: SBdeckingandplanters
 author: James Dinsdale
 permalink: "/writing/:title/"
