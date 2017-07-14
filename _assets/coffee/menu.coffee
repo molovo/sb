@@ -3,9 +3,19 @@ module.exports = class Menu
     ###*
      * The menu toggle icon
      *
-     * @type {HTMLElement}
+     * @type {HTMLElementCollection}
     ###
     @menuButtons = document.querySelectorAll '.menu__toggle'
+
+    ###*
+     * The contact link in the sidebar
+     *
+     * @type {HTMLElement}
+    ###
+    @contactLink = document.querySelector '.sidebar__contact-link'
+
+    @contactLink.addEventListener 'click', () =>
+      @toggleSidebarVisibility()
 
     @registerMenuButtonListener()
 
