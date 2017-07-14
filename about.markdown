@@ -1,6 +1,7 @@
 ---
 title: About Me
 layout: page
+slug: about
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

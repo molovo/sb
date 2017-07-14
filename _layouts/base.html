@@ -123,13 +123,11 @@
 
   <title>{{ title }}</title>
 </head>
-<body class="page--{{ page.layout }}">
+<body class="page--{{ page.layout }} {% if page.slug %}page--{{ page.slug}}{% endif %}">
   {% include nav.html %}
   {% include header.html %}
 
-  <main id="content" class="content" role="main">
-    {{ content }}
-  </main>
+  {{ content }}
 
   {% include footer.html %}
 

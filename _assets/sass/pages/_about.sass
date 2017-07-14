@@ -1,0 +1,10 @@
+.page--about
+  .content
+    max-width: 48em
+    padding: #{$baseline * 2} $baseline
+
+    @media (min-width: 42em)
+      padding: between($baseline * 2, $baseline * 4, 42em, 80em) between($baseline, $baseline * 4, 42em, 80em)
+
+    @media (min-width: 80em)
+      padding: #{$baseline * 4}
