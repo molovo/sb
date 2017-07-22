@@ -1,4 +1,6 @@
-Menu = require './menu.coffee'
+Menu   = require './menu.coffee'
+zoom = require 'medium-zoom'
 
 window.addEventListener 'DOMContentLoaded', () ->
-  window.menu = new Menu
+  window.menu   = new Menu
+  zoom document.querySelectorAll('.zoom')

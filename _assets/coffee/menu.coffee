@@ -1,4 +1,9 @@
 module.exports = class Menu
+  ###*
+   * Start your engines!
+   *
+   * @return {Menu}
+  ###
   constructor: () ->
     ###*
      * The menu toggle icon

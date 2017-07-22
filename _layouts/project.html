@@ -9,7 +9,7 @@ layout: base
     <figure class="project-gallery">
       {% for image in page.images %}
         <div class="project-gallery__image">
-          {% picture {{ image }} %}
+          {% picture {{ image }} class="zoom" %}
         </div>
       {% endfor %}
     </figure>
