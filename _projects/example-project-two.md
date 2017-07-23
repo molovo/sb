@@ -7,7 +7,7 @@ images:
 - IMG_20160724_090552.jpg
 - IMG_20160724_181018.jpg
 - "/uploads/IMG_20160725_192453.jpg"
-size: 45m²
+size: 32m2
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
