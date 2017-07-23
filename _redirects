@@ -1,0 +1,2 @@
+# Ensure correct domain is used
+https://sbdecking.netlify.com/*    https://sbdecking.com/:splat    301!

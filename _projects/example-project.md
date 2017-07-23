@@ -6,6 +6,7 @@ images:
 client: Miss Scarlet
 location: Bournemouth, UK
 size: 45m²
+testimonial: Steve did a wonderful job with my garden, it looks lovely.
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

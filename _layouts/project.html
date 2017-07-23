@@ -19,3 +19,9 @@ layout: base
     {% include project/info.html project=page %}
   </aside>
 </section>
+
+{% if page.testimonial %}
+  <blockquote class="testimonial">
+    <p>{{ page.testimonial }}</p>
+  </blockquote>
+{% endif %}

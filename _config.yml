@@ -20,10 +20,10 @@ defaults:
     layout: project
     hide_intro: true
     images:
-    - 
-    client: 
-    location: 
-    size: 
+    -
+    client:
+    location:
+    size:
 name: S.B. Decking and Planters
 email: stevebealing.decking@gmail.com
 tel: 07712 804670
@@ -32,7 +32,7 @@ description: Steve Bealing is an independent contractor, designing and building 
 headline: Steve Bealing is an independent contractor, designing and building bespoke
   decking and garden fixtures across the South West.
 baseurl: "/"
-url: https://sbdecking.netlify.com
+url: https://sbdecking.com
 facebook_username: SBdeckingandplanters
 author: James Dinsdale
 permalink: "/writing/:title/"
@@ -57,6 +57,8 @@ keep_files:
 - css
 - js
 - img
+include:
+- _redirects
 exclude:
 - _assets
 - coffeelint.json
