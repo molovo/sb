@@ -1,12 +1,10 @@
 ---
 title: Homepage
 services:
-  decking: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-  planters: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-  fencing: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+  decking: 'Transform your outdoor entertaining space with bespoke decking. Timber
+    or composite. Free measuring and estimates. '
+  planters: 'Timber planters made to fit your requirements. '
+  fencing: "\n"
 layout: page
 ---
 
