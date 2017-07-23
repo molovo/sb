@@ -8,6 +8,10 @@
       <li><strong>Location:</strong> {{ include.project.location }}</li>
     {% endif %}
 
+    {% if include.project.materials %}
+      <li><strong>Materials Used:</strong> {{ include.project.materials }}</li>
+    {% endif %}
+
     {% if include.project.size %}
       <li><strong>Size:</strong> {{ include.project.size }}</li>
     {% endif %}

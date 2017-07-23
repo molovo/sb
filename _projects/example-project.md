@@ -3,8 +3,6 @@ title: Example Project
 images:
 - 20170518_154022.jpg
 - 20170518_154014.jpg
-client: Miss Scarlet
-location: Bournemouth, UK
 size: 45m²
 testimonial: Steve did a wonderful job with my garden, it looks lovely.
 ---

@@ -7,8 +7,6 @@ images:
 - IMG_20160724_090552.jpg
 - IMG_20160724_181018.jpg
 - "/uploads/IMG_20160725_192453.jpg"
-client: Miss Scarlet
-location: Bournemouth, UK
 size: 45m²
 ---
 

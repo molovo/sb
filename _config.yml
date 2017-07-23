@@ -20,11 +20,10 @@ defaults:
     layout: project
     hide_intro: true
     images:
-    - 
-    client: 
-    location: 
-    size: 
-    testimonial: 
+    -
+    size:
+    testimonial:
+>>>>>>> Stashed changes
 name: S.B. Decking and Planters
 email: stevebealing.decking@gmail.com
 tel: 07712 804670
