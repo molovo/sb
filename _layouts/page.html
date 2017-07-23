@@ -6,7 +6,7 @@ layout: base
   <section class="gallery">
     {% for image in page.images limit: 3 %}
       <div class="gallery__image">
-        {% picture {{ image }} %}
+        {% picture {{ image | split: '/' | last }} %}
       </div>
     {% endfor %}
   </section>
@@ -14,7 +14,7 @@ layout: base
   <section class="gallery">
     {% for project in site.projects limit: 3 %}
       <div class="gallery__image">
-        {% picture {{ project.images | first }} %}
+        {% picture {{ project.images | first | split: '/' | last }} %}
       </div>
     {% endfor %}
   </section>

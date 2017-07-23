@@ -1,7 +1,7 @@
 {% if page.image %}
-  {% assign image = page.image %}
+  {% capture image %}{{ page.image | split: '/' | last }}{% endcapture %}
 {% elsif page.images %}
-  {% capture image %}{{ page.images | first }}{% endcapture %}
+  {% capture image %}{{ page.images | first | split: '/' | last }}{% endcapture %}
 {% endif %}
 
 {% if image %}

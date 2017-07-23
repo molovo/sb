@@ -8,7 +8,7 @@ layout: base
       <figure class="project-gallery">
         {% for image in project.images limit: 2 %}
           <div class="project-gallery__image">
-            {% picture {{ image }} %}
+            {% picture {{ image | split: '/' | last }} %}
           </div>
         {% endfor %}
       </figure>
