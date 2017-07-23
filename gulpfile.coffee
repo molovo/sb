@@ -27,7 +27,7 @@ imagemin     = require 'gulp-imagemin'
 sources =
   sass: '_assets/sass/**/*.s+(a|c)ss'
   coffee: '_assets/coffee/**/*.coffee'
-  images: '_assets/img/**/*'
+  images: ['_assets/img/**/*', '_uploads/**/*']
   views: ['**/*.{html,md}', '!_site/**/*', '_data/**/*.yml']
 entries =
   sass: '_assets/sass/main.sass'

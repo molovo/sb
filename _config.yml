@@ -71,7 +71,7 @@ exclude:
 - package.json
 - yarn.lock
 picture:
-  source: _assets/img
+  source: _uploads
   output: img
   markup: picture
   presets:
