@@ -3,7 +3,7 @@ title: Example Project
 images:
 - 20170518_154022.jpg
 - 20170518_154014.jpg
-size: 45m²
+size: 8m x 12m party deck
 testimonial: Steve did a wonderful job with my garden, it looks lovely.
 ---
 
