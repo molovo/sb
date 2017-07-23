@@ -20,10 +20,11 @@ defaults:
     layout: project
     hide_intro: true
     images:
-    - 
-    client: 
-    location: 
-    size: 
+    -
+    client:
+    location:
+    size:
+    testimonial:
 name: S.B. Decking and Planters
 email: stevebealing.decking@gmail.com
 tel: 07712 804670

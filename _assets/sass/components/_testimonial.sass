@@ -1,0 +1,27 @@
+.testimonial
+  background: $color-almost-black
+  color: $color-white
+  padding: #{$baseline * 2} $baseline
+
+  @media (min-width: 42em)
+    padding: between($baseline * 2, $baseline * 4, 42em, 80em) between($baseline, $baseline * 4, 42em, 80em)
+
+  @media (min-width: 60em)
+    flex-wrap: nowrap
+
+  @media (min-width: 80em)
+    padding: #{$baseline * 4}
+
+  &__quote
+    font-family: $font-cursive
+    font-size: 3em
+    line-height: #{(1 / 1.5) * $baseline}
+    margin-bottom: #{(.5 / 1.5) * $baseline}
+    quotes: '“' '”' '‘' '’'
+    text-align: center
+
+    &::before
+      content: open-quote
+
+    &::after
+      content: close-quote
